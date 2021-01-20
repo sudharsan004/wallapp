@@ -1,9 +1,9 @@
 
-import Posts from './Posts'
+import Wall from './Wall'
 function App() {
   return (
    <>
-   <Posts/>
+   <Wall/>
    </>
   );
 }
