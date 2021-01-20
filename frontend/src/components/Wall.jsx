@@ -18,7 +18,7 @@ function Wall() {
     useEffect(() => {
         loadAllPosts()
     }
-        , [])
+    , [])
     return (
         <div>
             
@@ -31,6 +31,7 @@ function Wall() {
                                 key={index}
                                 title={post.title}
                                 description={post.description}
+                                user_name ={post.user_name}
                                 user={post.user}
                             />
                         </>

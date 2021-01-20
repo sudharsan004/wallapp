@@ -6,19 +6,19 @@
     width: 240px;
     margin: 16px;
     float: left;
-  }
-  .post h1 {
+}
+.post h1 {
     font-size: 1.1em;
     margin-bottom: 6px;
-  }
-  .post p {
+}
+.post p {
     font-size: 1.1em;
     margin-bottom: 10px;
     white-space: pre-wrap;
     word-wrap: break-word;
-  }
+}
   
-  .post button {
+.post button {
     position: relative;
     float: right;
     margin-right: 10px;
@@ -28,4 +28,9 @@
     height: 36px;
     cursor: pointer;
     outline: none;
-  }
+}
+
+.small{
+  font-size: 0.7em;
+  margin-bottom: 5px;
+}
