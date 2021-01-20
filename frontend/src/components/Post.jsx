@@ -1,6 +1,6 @@
 import { React } from 'react'
 import DeleteIcon from "@material-ui/icons/Delete";
-import './Post.css'
+import './css/Post.css'
 
 function Post(props) {
 

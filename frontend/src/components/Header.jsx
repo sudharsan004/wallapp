@@ -1,6 +1,6 @@
 import React from 'react'
 import BrushIcon from '@material-ui/icons/BrushTwoTone';
-import './Header.css'
+import './css/Header.css'
 function Header() {
     return (
         <header>
