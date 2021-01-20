@@ -21,6 +21,7 @@ function Wall() {
         , [])
     return (
         <div>
+            
             <CreateArea />
             {posts.map(
                 (post, index) => {
