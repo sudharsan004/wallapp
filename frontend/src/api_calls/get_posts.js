@@ -1,10 +1,11 @@
 import API from  '../backend'
 
 
-const getPosts =()=>{
+const getPosts = () =>{
    return  fetch(`${API}post/`,{method:"GET"})
-    .then(response=>response.json())
-    .then(r=>r)
+    .then(response=>{
+        return response.json();
+    })
     .catch(e=>console.log(e))
 }
 

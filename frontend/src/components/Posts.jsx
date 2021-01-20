@@ -4,7 +4,22 @@ import getPosts from '../api_calls/get_posts'
 
 
 function Posts() {
-    const posts = getPosts()
+    const [posts, setposts] = useState([])
+
+    const loadAllPosts = () => {
+        getPosts()
+        .then(data=>{
+            setposts(data)
+        })
+        .catch(err=>console.log(err))
+    }
+
+    useEffect(() => {
+        loadAllPosts()
+        }
+    , [])
+
+    
     return (
         <div>
             {console.log(posts)}
