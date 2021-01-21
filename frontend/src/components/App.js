@@ -1,6 +1,6 @@
 import Header from './Header'
 import Wall from './Wall'
-import Register from './Register'
+import Register from './AuthComponents/Register'
 function App() {
   
   return (

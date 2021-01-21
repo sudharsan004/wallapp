@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
-import './css/Register.css'
+import './Register.css'
 import Button from '@material-ui/core/Button';
-import register from '../api_calls/register'
+import register from '../../api_calls/register'
 
 
 function Register() {
