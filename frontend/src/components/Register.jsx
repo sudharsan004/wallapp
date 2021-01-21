@@ -52,12 +52,12 @@ function Register() {
                     type="password"
                 /> */}
                 <Button onClick={()=>{
-                    // let username = document.querySelector('#username').value
-                    // let email = document.querySelector('#email').value
-                    // let password = document.querySelector('#password').value
-                    // register({"username":username,"email":email,"password":password})
                     register(userdetails)
-                    
+                    setUserdetails({
+                        username: "",
+                        email: "",
+                        password:"",
+                      })
                 }} variant="contained" color="#eee">
                     Register
                 </Button>
