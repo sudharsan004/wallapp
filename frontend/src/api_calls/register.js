@@ -15,7 +15,9 @@ const register= (props) =>{
         })
       })
       .then(response=>response.json())
+      .catch(e=>e)
       .then(r=>console.log(r))
+      alert("Registeration Successfull!")
 }
 
 export default register

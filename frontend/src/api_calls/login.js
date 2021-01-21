@@ -2,7 +2,7 @@ import API from  '../backend'
 
 const login= (props) =>{
     let {username,password}=props
-    fetch(`${API}user/login`,{
+    fetch(`${API}user/login/`,{
         method: 'POST',
         headers: {
           'Accept': 'application/json',

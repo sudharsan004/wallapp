@@ -28,3 +28,15 @@ class RegisterSerializer(serializers.ModelSerializer):
             ['sudharsansriram8921@gmail.com'],
             fail_silently=False,)
         return user
+
+# Login Serializer
+
+class LoginSerializer(serializers.Serializer):
+    username = serializers.CharField()
+    password = serializers.CharField()
+
+    def validate(self,data):
+        user = authenticate(**data)
+        if user and user.is_active:
+            return user
+        raise serializers.ValidationError("Invalid Credentials")

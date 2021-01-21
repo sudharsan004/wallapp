@@ -1,13 +1,12 @@
 import React,{useState} from 'react'
-import './Register.css'
+import './Login.css'
 import Button from '@material-ui/core/Button';
-import register from '../../api_calls/register'
+import login from '../../api_calls/login'
 
 
-function Register() {
+function Login() {
     const [userdetails, setUserdetails] = useState({
         username: "",
-        email: "",
         password:"",
       });
     
@@ -23,21 +22,13 @@ function Register() {
       }
     return (
         <div>
-            <form id="register-form" className="register-form">
+            <form id="login-form" className="login-form">
                 <input
                     id="username"
                     onChange={handleChange}
                     value={userdetails.username}
                     name="username"
                     placeholder="Username"
-                />
-                <input
-                    id='email'
-                    onChange={handleChange}
-                    value={userdetails.email}
-                    name="email"
-                    placeholder="email"
-                    type='email'
                 />
                 <input
                     id="password"
@@ -47,25 +38,20 @@ function Register() {
                     placeholder="password"
                     type="password"
                 />
-                {/* <input
-                    name="confirm_password"
-                    placeholder="confirmpassword"
-                    type="password"
-                /> */}
+                
                 <Button onClick={()=>{
-                    let res=register(userdetails)
-                    console.log(res)
+                    let res=login(userdetails)
+                    console.log(res);
                     setUserdetails({
                         username: "",
-                        email: "",
                         password:"",
                       })
                 }} variant="contained" color="#eee">
-                    Register
+                    Login
                 </Button>
             </form>
         </div>
     )
 }
 
-export default Register
+export default Login
