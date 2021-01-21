@@ -6,6 +6,7 @@ import Post from './Post'
 
 function Wall() {
     const [posts, setposts] = useState([])
+    const [addNewNote, setaddNewNote] = useState(false)
 
     const loadAllPosts = () => {
         getPosts()
@@ -14,15 +15,16 @@ function Wall() {
             })
             .catch(err => console.log(err))
     }
-
     useEffect(() => {
         loadAllPosts()
     }
-    , [])
+    , [addNewNote])
     return (
         <div>
             
-            <CreateArea />
+            <CreateArea 
+            onAdd = {setaddNewNote}
+            />
             {posts.map(
                 (post, index) => {
                     return (

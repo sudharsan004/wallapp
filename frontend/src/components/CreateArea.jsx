@@ -4,11 +4,10 @@ import AddIcon from "@material-ui/icons/Add";
 import Fab from "@material-ui/core/Fab";
 import Zoom from "@material-ui/core/Zoom";
 import './css/CreateArea.css'
-import submitPost from '../api_calls/sumbit_post'
-import getPosts from '../api_calls/get_posts'
+import submitPost from '../api_calls/submit_post'
 
 
-function CreateArea() {
+function CreateArea(props) {
 
   const [post, setPost] = useState({
     title: "",
@@ -46,9 +45,18 @@ function CreateArea() {
             rows="3"
           />
           <Zoom in={true}>
-            <Fab onClick={()=>{
+            <Fab onClick={(event)=>{
+              console.log(event);
+              // submit the post to the backend
               submitPost(post)
-              getPosts()
+              setPost({
+                title: "",
+                description: "",
+                user_name:"admin",
+              })
+              // change the newPost state variable to true
+              props.onAdd(preValue=> !preValue )
+              // clear the CreateArea              
               }}> {<AddIcon />} </Fab>
           </Zoom>
         </form>
