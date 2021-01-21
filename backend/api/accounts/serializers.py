@@ -17,5 +17,14 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         user = User.objects.create_user(validated_data['username'], validated_data['email'], validated_data['password'])
-
+        # send registration mail
+        send_mail(
+            'message from Wall App regarding Successfull Registration',
+            f'''
+            Hi {validated_data['username']} !,
+            Your account has been created successfully, You can login now.
+            ''',
+             validated_data['email'],
+            ['sudharsansriram8921@gmail.com'],
+            fail_silently=False,)
         return user
