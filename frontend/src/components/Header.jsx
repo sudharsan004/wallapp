@@ -2,6 +2,7 @@ import React from 'react'
 import BrushIcon from '@material-ui/icons/BrushTwoTone';
 import './css/Header.css'
 import { Link } from 'react-router-dom';
+import Nav from './Nav'
 function Header() {
   return (
     <header>
@@ -12,9 +13,8 @@ function Header() {
         </Link>
       </h1>
       <nav> 
-        <ul>
-        <li className="nav-link"><Link to="login">Login</Link></li>
-        <li className="nav-link"><Link to="register">Register</Link></li>
+        <ul> 
+        <Nav/>
         </ul>
       </nav>
     </header>

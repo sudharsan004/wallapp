@@ -12,7 +12,7 @@ function CreateArea(props) {
   const [post, setPost] = useState({
     title: "",
     description: "",
-    user_name: "admin",
+    user_name: localStorage.username,
   });
 
   function handleChange(event) {
@@ -53,7 +53,7 @@ function CreateArea(props) {
                 setPost({
                   title: "",
                   description: "",
-                  user_name: "admin",
+                  user_name: localStorage.username,
 
                 })
               }

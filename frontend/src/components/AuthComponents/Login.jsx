@@ -44,6 +44,7 @@ function Login() {
                 <Button onClick={()=>{
                     let res=login(userdetails)
                     console.log(res);
+                    localStorage.setItem("username", userdetails.username);
                     setUserdetails({
                         username: "",
                         password:"",
