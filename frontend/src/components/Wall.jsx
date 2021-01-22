@@ -30,11 +30,14 @@ function Wall() {
                     return (
                         <>
                             < Post
+                                onAdd = {setaddNewNote}
                                 key={index}
                                 title={post.title}
                                 description={post.description}
                                 user_name ={post.user_name}
                                 user={post.user}
+                                date ={post.created_at}
+                                k={post.id}
                             />
                         </>
                     )
@@ -46,3 +49,5 @@ function Wall() {
 }
 
 export default Wall
+
+
