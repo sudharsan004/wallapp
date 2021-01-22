@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, } from 'react'
 import AddIcon from "@material-ui/icons/Add";
+import LockIcon from "@material-ui/icons/Lock";
 import Fab from "@material-ui/core/Fab";
 import Zoom from "@material-ui/core/Zoom";
 import './css/CreateArea.css'
@@ -44,6 +45,7 @@ function CreateArea(props) {
             placeholder="Write on wall..."
             rows="3"
           />
+          { localStorage.username ?
           <Zoom in={true}>
             <Fab onClick={(event) => {
               console.log(event);
@@ -63,8 +65,19 @@ function CreateArea(props) {
               // change the newPost state variable to true
               props.onAdd(preValue => !preValue)
               // clear the CreateArea              
-            }}> {<AddIcon />} </Fab>
+            }}> 
+            
+            {<AddIcon />} 
+          </Fab>
           </Zoom>
+          : <>login Required To post
+          <Zoom in={true}>
+            <Fab >
+            <LockIcon/>
+          </Fab>
+          </Zoom>
+          </>
+  }
         </form>
       </div>
     );
