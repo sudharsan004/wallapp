@@ -6,14 +6,15 @@ function Header() {
   return (
     <header>
       <h1>
-        
+        <Link to="/">
         <BrushIcon />
         Wall App
+        </Link>
       </h1>
       <nav> 
         <ul>
-        <li><Link to="login">Login</Link></li>
-        <li><Link to="register">Register</Link></li>
+        <li className="nav-link"><Link to="login">Login</Link></li>
+        <li className="nav-link"><Link to="register">Register</Link></li>
         </ul>
       </nav>
     </header>

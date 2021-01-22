@@ -9,6 +9,7 @@ header {
     color: #fff;
     font-family: "McLaren", cursive;
     font-weight: 200;
+    display: inline-block;
   }
 
   .navbar{
@@ -34,5 +35,12 @@ nav ul li{
 }
 a{
     text-decoration: none;
-    color:#555;
+    color:#fff;
+    font-weight: 150;
 }
+
+.nav-link{
+  font-family: cursive;
+  font-size: 20px;
+}
+

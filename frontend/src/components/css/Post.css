@@ -9,10 +9,12 @@
 }
 .post h1 {
     font-size: 1.1em;
+    color: rgb(41, 40, 40);
     margin-bottom: 6px;
 }
 .post p {
-    font-size: 1.1em;
+    font-size: 1em;
+    color: rgb(26, 26, 26);
     margin-bottom: 10px;
     white-space: pre-wrap;
     word-wrap: break-word;
