@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import './Login.css'
 import Button from '@material-ui/core/Button';
 import login from '../../api_calls/login'
+import Header from '../Header';
 
 
 function Login() {
@@ -22,6 +23,7 @@ function Login() {
       }
     return (
         <div>
+          <Header/>
             <form id="login-form" className="login-form">
                 <input
                     id="username"

@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import './Register.css'
 import Button from '@material-ui/core/Button';
 import register from '../../api_calls/register'
+import Header from '../Header';
 
 
 function Register() {
@@ -23,6 +24,7 @@ function Register() {
       }
     return (
         <div>
+            <Header/>
             <form id="register-form" className="register-form">
                 <input
                     id="username"

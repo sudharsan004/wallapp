@@ -6,8 +6,6 @@ function App() {
   
   return (
    <>
-   <Login/>
-   <Register/>
    <Header/>
    <Wall/>
    </>
