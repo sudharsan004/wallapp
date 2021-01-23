@@ -41,14 +41,20 @@ function Login() {
                     type="password"
                 />
                 
-                <Button onClick={()=>{
-                    let res=login(userdetails)
-                    console.log(res);
-                    localStorage.setItem("username", userdetails.username);
+                <Button type="submit" onClick={()=>{
+                  if (userdetails.password && userdetails.username){
+                  let data=login(userdetails)
+                  
                     setUserdetails({
                         username: "",
                         password:"",
                       })
+                      
+                      
+                     
+                    } else{
+                        alert("Fill both Fields")
+                      }
                 }} variant="contained" color="#eee">
                     Login
                 </Button>

@@ -13,8 +13,24 @@ const login= (props) =>{
             "password":password,
         })
       })
+      
       .then(response=>response.json())
-      .then(r=>console.log(r))
+      .catch(e=>e)
+      .then(r=>{
+        console.log(r)
+        if (r.token){
+        localStorage.clear()
+        localStorage.setItem('user',r.user)
+        localStorage.setItem('username',r.user.username)
+        localStorage.setItem('token',r.token)}
+        if (localStorage.username === username) {
+          alert('Login Success')
+       }else{
+         alert('Wrong UserName/ Password')
+       }
+      })
+      
+      
 }
 
 export default login

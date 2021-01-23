@@ -55,13 +55,16 @@ function Register() {
                     type="password"
                 /> */}
                 <Button onClick={()=>{
+                    if ((userdetails.username && userdetails.email) && userdetails.password){
                     let res=register(userdetails)
                     console.log(res)
                     setUserdetails({
                         username: "",
                         email: "",
                         password:"",
-                      })
+                      })}else{
+                          alert("Fill all fields!")
+                      }
                 }} variant="contained" color="#eee">
                     Register
                 </Button>
